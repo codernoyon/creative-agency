@@ -1,9 +1,15 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Home from './Pages/Home/Home';
+import Header from './Shared/Header/Header';
 
 function App() {
   return (
     <div className="App">
-      <h2 className="text-2xl text-orange-500 text-center">Hello World</h2>
+      <Header/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+      </Routes>
     </div>
   );
 }
